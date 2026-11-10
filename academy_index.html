@@ -1,0 +1,354 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1722">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("mostanad-academy-theme")==="light"?"light":"dark"}catch{document.documentElement.dataset.theme="dark"}</script>
+  <meta name="description" content="منصة تعلم مستند أكاديمي — دورات عملية في ضبط الوثائق والمشاريع الهندسية.">
+  <title>منصة التعلم | Mostanad Academy</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./academy.css">
+  <script src="courses-data.js"></script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">تجاوز إلى المحتوى</a>
+  <header class="portal-header">
+    <a class="portal-brand" href="index.html" aria-label="Mostanad Academy">
+      <img class="portal-brand-logo" src="mostanad-academy-logo.png" alt="" width="54" height="54">
+      <span><strong>Mostanad Academy</strong><small data-ar="تعليم مهني · ممارسة واقعية" data-en="Professional education · real-world practice">تعليم مهني · ممارسة واقعية</small></span>
+    </a>
+    <nav class="portal-nav" aria-label="التنقل" data-label-ar="التنقل" data-label-en="Navigation">
+      <a href="academy_index.html#login">تسجيل الدخول</a>
+      <a href="#courses">الدورات</a>
+      <a href="index.html">الموقع الرئيسي <span aria-hidden="true">↗</span></a>
+      <a href="index.html#services">الخدمات</a>
+      <a href="dashboard.html">لوحتي</a>
+      <a href="courses.html">الكورسات</a>
+      <button id="theme-toggle" type="button" class="theme-toggle" aria-pressed="false" aria-label="تفعيل الوضع الليلي">☾</button>
+      <button id="language-toggle" type="button" class="quiet-button" hidden>English</button>
+      <button id="sign-out" type="button" class="quiet-button" hidden>تسجيل الخروج</button>
+      <button id="mobile-menu" type="button" class="mobile-menu" aria-expanded="false" aria-controls="portal-menu">القائمة</button>
+    </nav>
+    <div class="mobile-menu-panel" id="portal-menu" hidden>
+      <a href="academy_index.html#login">تسجيل الدخول</a>
+      <a href="#courses">الدورات</a>
+      <a href="index.html">الموقع الرئيسي ↗</a>
+      <a href="index.html#services">الخدمات</a>
+      <a href="dashboard.html">لوحتي</a>
+      <a href="courses.html">الكورسات</a>
+      <button id="mobile-language-toggle" type="button">English</button>
+      <button id="mobile-sign-out" type="button" hidden>تسجيل الخروج</button>
+    </div>
+  </header>
+
+  <main id="main" class="portal-shell">
+    <section class="portal-intro">
+      <div>
+        <span class="eyebrow"><span class="live-dot"></span> مختبر التعلّم المهني</span>
+        <h1>تعلّم كيف <em>تُدار المشاريع.</em></h1>
+        <p>دورات عملية في ضبط الوثائق، وإدارة سجلات المشروع، وتدفّقات العمل الهندسية؛ تتعلّم بإيقاعك وتطبّق ما تعرفه.</p>
+      </div>
+      <a class="intro-side-note" href="courses.html">
+        <span class="note-icon">▤</span>
+        <span><strong>المكتبة المهنية</strong><small>نماذج وسجلات جاهزة لمشاريعك</small></span>
+        <b>↗</b>
+      </a>
+    </section>
+
+    <section id="courses" class="public-courses" aria-labelledby="public-courses-title">
+      <div class="public-courses-heading">
+        <div>
+          <span class="section-label" data-ar="تعلّم مهارات المشروع" data-en="BUILD PROJECT SKILLS">تعلّم مهارات المشروع</span>
+          <h2 id="public-courses-title" data-ar="مسارات تدريبية واضحة، من الأساس إلى التطبيق." data-en="Clear learning paths, from fundamentals to practice.">مسارات تدريبية واضحة، من الأساس إلى التطبيق.</h2>
+          <p data-ar="استعرض عيّنة من موضوعات الأكاديمية قبل التسجيل. الدروس التفاعلية وتقدّمك الشخصي متاحان بعد إعداد الحساب." data-en="Explore sample academy topics before signing up. Interactive lessons and personal progress are available after account setup.">استعرض عيّنة من موضوعات الأكاديمية قبل التسجيل. الدروس التفاعلية وتقدّمك الشخصي متاحان بعد إعداد الحساب.</p>
+        </div>
+        <a class="secondary-button" href="academy_index.html#login"><span data-ar="تسجيل الدخول" data-en="Sign in">تسجيل الدخول</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="public-course-grid">
+        <article class="public-course-card" id="course-fundamentals">
+          <div class="public-course-meta"><span>01</span><span data-ar="المستوى التأسيسي" data-en="FOUNDATION">المستوى التأسيسي</span></div>
+          <h3 data-ar="أساسيات ضبط الوثائق" data-en="Document Control Fundamentals">أساسيات ضبط الوثائق</h3>
+          <p data-ar="ابدأ بدورة حياة المستندات، والترقيم، والمراجعات، وسجلات التتبّع." data-en="Start with document lifecycles, numbering, revisions, and tracking registers.">ابدأ بدورة حياة المستندات، والترقيم، والمراجعات، وسجلات التتبّع.</p>
+          <details class="course-syllabus">
+            <summary data-ar="استعراض موضوعات الدورة" data-en="Preview course topics">استعراض موضوعات الدورة</summary>
+            <ol>
+              <li data-ar="دور مسؤول ضبط الوثائق ومسار المستند" data-en="The document controller’s role and document lifecycle">دور مسؤول ضبط الوثائق ومسار المستند</li>
+              <li data-ar="أنظمة الترقيم، المراجعات، وحالة المستند" data-en="Numbering systems, revisions, and document status">أنظمة الترقيم، المراجعات، وحالة المستند</li>
+              <li data-ar="إعداد سجل المستندات ومتابعة المواعيد" data-en="Building a document register and tracking due dates">إعداد سجل المستندات ومتابعة المواعيد</li>
+            </ol>
+            <p class="course-detail-label" data-ar="المتطلبات: لا توجد خبرة سابقة مطلوبة." data-en="Prerequisites: No prior experience required.">المتطلبات: لا توجد خبرة سابقة مطلوبة.</p>
+            <strong class="course-detail-label" data-ar="ما ستتعلمه" data-en="What you will learn">ما ستتعلمه</strong>
+            <ul class="course-outcomes"><li data-ar="شرح دورة حياة المستند ومسؤوليات ضبطه." data-en="Explain the document lifecycle and document-control responsibilities.">شرح دورة حياة المستند ومسؤوليات ضبطه.</li><li data-ar="قراءة أرقام المستندات وحالات المراجعة." data-en="Interpret document numbers and revision statuses.">قراءة أرقام المستندات وحالات المراجعة.</li><li data-ar="إنشاء سجل أولي ومتابعة المواعيد." data-en="Build a basic register and track due dates.">إنشاء سجل أولي ومتابعة المواعيد.</li></ul>
+          </details>
+          <a class="course-join-link" href="academy_index.html#login"><span data-ar="سجّل الدخول للوصول" data-en="Sign in to access">سجّل الدخول للوصول</span><span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="public-course-card" id="course-edms">
+          <div class="public-course-meta"><span>02</span><span data-ar="تطبيق عملي" data-en="PRACTICAL">تطبيق عملي</span></div>
+          <h3 data-ar="إدارة EDMS وAconex" data-en="EDMS &amp; Aconex Workflows">إدارة EDMS وAconex</h3>
+          <p data-ar="تعرّف على التقديمات، والإحالات، وسير الاعتماد في أنظمة إدارة الوثائق." data-en="Explore submittals, transmittals, and approval workflows in document systems.">تعرّف على التقديمات، والإحالات، وسير الاعتماد في أنظمة إدارة الوثائق.</p>
+          <details class="course-syllabus">
+            <summary data-ar="استعراض موضوعات الدورة" data-en="Preview course topics">استعراض موضوعات الدورة</summary>
+            <ol>
+              <li data-ar="التعرّف على بيئة EDMS وصلاحيات المستخدمين" data-en="Navigating an EDMS and understanding user permissions">التعرّف على بيئة EDMS وصلاحيات المستخدمين</li>
+              <li data-ar="إعداد حزمة التقديم ومراجعة بياناتها" data-en="Preparing a submission package and checking its metadata">إعداد حزمة التقديم ومراجعة بياناتها</li>
+              <li data-ar="متابعة التعليقات والإصدارات حتى الاعتماد" data-en="Tracking comments and revisions through approval">متابعة التعليقات والإصدارات حتى الاعتماد</li>
+            </ol>
+            <p class="course-detail-label" data-ar="المتطلبات: معرفة أساسية بدورة المستندات موصى بها." data-en="Prerequisites: Basic familiarity with document workflows is recommended.">المتطلبات: معرفة أساسية بدورة المستندات موصى بها.</p>
+            <strong class="course-detail-label" data-ar="ما ستتعلمه" data-en="What you will learn">ما ستتعلمه</strong>
+            <ul class="course-outcomes"><li data-ar="التعرّف على وظائف EDMS وصلاحيات الوصول." data-en="Identify EDMS functions and access permissions.">التعرّف على وظائف EDMS وصلاحيات الوصول.</li><li data-ar="تجهيز إحالة ومراجعة بياناتها الأساسية." data-en="Prepare a transmittal and review its basic metadata.">تجهيز إحالة ومراجعة بياناتها الأساسية.</li><li data-ar="متابعة التعليقات والمراجعات حتى إغلاق الإجراء." data-en="Track comments and revisions through workflow closure.">متابعة التعليقات والمراجعات حتى إغلاق الإجراء.</li></ul>
+          </details>
+          <a class="course-join-link" href="academy_index.html#login"><span data-ar="سجّل الدخول للوصول" data-en="Sign in to access">سجّل الدخول للوصول</span><span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="public-course-card">
+          <div class="public-course-meta"><span>03</span><span data-ar="المستوى المتقدم" data-en="ADVANCED">المستوى المتقدم</span></div>
+          <h3 data-ar="الأرشفة والتقارير الذكية" data-en="Archiving &amp; Smart Reporting">الأرشفة والتقارير الذكية</h3>
+          <p data-ar="أنشئ بنية أرشيف منظمة، وطوّر سجلات ولوحات متابعة باستخدام Excel." data-en="Design a structured archive and build practical registers and Excel dashboards.">أنشئ بنية أرشيف منظمة، وطوّر سجلات ولوحات متابعة باستخدام Excel.</p>
+          <details class="course-syllabus">
+            <summary data-ar="استعراض موضوعات الدورة" data-en="Preview course topics">استعراض موضوعات الدورة</summary>
+            <ol>
+              <li data-ar="تصنيف الملفات وبنية الأرشيف الرقمي" data-en="File classification and digital archive structures">تصنيف الملفات وبنية الأرشيف الرقمي</li>
+              <li data-ar="إنشاء سجلات وتقارير تقدم واضحة" data-en="Creating clear registers and progress reports">إنشاء سجلات وتقارير تقدم واضحة</li>
+              <li data-ar="مبادئ أتمتة Excel ولوحات المعلومات" data-en="Excel automation and dashboard fundamentals">مبادئ أتمتة Excel ولوحات المعلومات</li>
+            </ol>
+            <p class="course-detail-label" data-ar="المتطلبات: أساسيات إدارة الملفات وExcel موصى بها." data-en="Prerequisites: Basic file management and Excel skills are recommended.">المتطلبات: أساسيات إدارة الملفات وExcel موصى بها.</p>
+            <strong class="course-detail-label" data-ar="ما ستتعلمه" data-en="What you will learn">ما ستتعلمه</strong>
+            <ul class="course-outcomes"><li data-ar="تصميم تصنيف واضح للأرشيف الرقمي." data-en="Design a clear classification structure for a digital archive.">تصميم تصنيف واضح للأرشيف الرقمي.</li><li data-ar="تنظيم سجل وتقارير تقدم قابلة للمتابعة." data-en="Organize a trackable register and progress reports.">تنظيم سجل وتقارير تقدم قابلة للمتابعة.</li><li data-ar="تطبيق مبادئ أولية للأتمتة ولوحات المعلومات." data-en="Apply introductory automation and dashboard techniques.">تطبيق مبادئ أولية للأتمتة ولوحات المعلومات.</li></ul>
+          </details>
+          <a class="course-join-link" href="academy_index.html#login"><span data-ar="سجّل الدخول للوصول" data-en="Sign in to access">سجّل الدخول للوصول</span><span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+<!-- كورسات إضافية مضافة من لوحة التحكم -->
+<div id="extra-courses-grid" class="public-course-grid" style="margin-top:16px"></div>
+      <p class="public-courses-note" data-ar="هذه معاينة لموضوعات التدريب. تظهر مدة الدورة وسعرها ومواعيدها بعد اعتمادها ونشرها من الإدارة؛ الدفع الإلكتروني غير متاح حالياً." data-en="This is a preview of training topics. Course duration, displayed price, and schedule appear once approved and published by an administrator; online payments are not currently available.">هذه معاينة لموضوعات التدريب. تظهر مدة الدورة وسعرها ومواعيدها بعد اعتمادها ونشرها من الإدارة؛ الدفع الإلكتروني غير متاح حالياً.</p>
+    </section>
+
+    <section class="portal-assistant-promo" aria-labelledby="portal-assistant-title">
+      <div>
+        <span class="section-label" data-ar="مركز المساعدة" data-en="HELP CENTER">مركز المساعدة</span>
+        <h2 id="portal-assistant-title" data-ar="اسأل مساعد الأكاديمية." data-en="Ask the academy assistant.">اسأل مساعد الأكاديمية.</h2>
+        <p data-ar="أسئلة عن استخدام الموقع ومهارات ضبط الوثائق؛ المساعد لا يطّلع على ملفاتك الخاصة." data-en="Ask about using the site and document-control skills; the assistant cannot access your private files.">أسئلة عن استخدام الموقع ومهارات ضبط الوثائق؛ المساعد لا يطّلع على ملفاتك الخاصة.</p>
+      </div>
+      <a class="secondary-button" href="academy_index.html#login"><span data-ar="الدخول إلى مركز المساعدة" data-en="Open the help center">الدخول إلى مركز المساعدة</span><span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="portal-faq" aria-labelledby="portal-faq-title">
+      <div class="section-title-row"><div><span class="section-label" data-ar="معلومات مهمة" data-en="IMPORTANT INFORMATION">معلومات مهمة</span><h2 id="portal-faq-title" data-ar="قبل بدء التعلّم" data-en="Before you get started">قبل بدء التعلّم</h2></div></div>
+      <div class="portal-faq-grid">
+        <details><summary data-ar="كيف أحصل على حساب؟" data-en="How do I get an account?">كيف أحصل على حساب؟</summary><p data-ar="التسجيل العام متوقف. ينشئ مسؤول الأكاديمية الحسابات المعتمدة؛ للاستفسار تواصل عبر واتساب." data-en="Public sign-up is disabled. An academy administrator creates approved accounts; contact us on WhatsApp for inquiries.">التسجيل العام متوقف. ينشئ مسؤول الأكاديمية الحسابات المعتمدة؛ للاستفسار تواصل عبر واتساب.</p></details>
+        <details><summary data-ar="هل توجد رسوم أو مدفوعات إلكترونية؟" data-en="Are there fees or online payments?">هل توجد رسوم أو مدفوعات إلكترونية؟</summary><p data-ar="قد تعرض الدورة سعراً معلوماتياً بعد نشره، لكن المنصة لا تعالج المدفوعات حالياً. لا تشارك بيانات بطاقتك عبر الموقع." data-en="A course may show an informational price once published, but the platform does not process payments. Do not share card details on this site.">قد تعرض الدورة سعراً معلوماتياً بعد نشره، لكن المنصة لا تعالج المدفوعات حالياً. لا تشارك بيانات بطاقتك عبر الموقع.</p></details>
+        <details><summary data-ar="ما شروط شهادة الإكمال؟" data-en="What are the certificate requirements?">ما شروط شهادة الإكمال؟</summary><p data-ar="يجب إعداد اختبار لكل درس واجتياز جميع الاختبارات. إصدار الشهادة يعتمد على إعداد الخدمات الخادمية للأكاديمية." data-en="A quiz must be configured for every lesson, and all quizzes must be passed. Certificate issuance depends on the academy's server-side services being configured.">يجب إعداد اختبار لكل درس واجتياز جميع الاختبارات. إصدار الشهادة يعتمد على إعداد الخدمات الخادمية للأكاديمية.</p></details>
+        <details><summary data-ar="لماذا لا أرى مدة الدورة أو مواعيدها؟" data-en="Why are duration or schedules missing?">لماذا لا أرى مدة الدورة أو مواعيدها؟</summary><p data-ar="تظهر هذه البيانات عندما تضيفها إدارة الأكاديمية وتعتمدها؛ لا نعرض تقديرات غير مؤكدة." data-en="These details appear when the academy team adds and confirms them; we do not show unverified estimates.">تظهر هذه البيانات عندما تضيفها إدارة الأكاديمية وتعتمدها؛ لا نعرض تقديرات غير مؤكدة.</p></details>
+      </div>
+      <p class="portal-faq-contact"><a href="https://wa.me/201156286464" target="_blank" rel="noopener noreferrer" data-ar="للاستفسارات، تواصل معنا عبر واتساب ↗" data-en="For inquiries, contact us on WhatsApp ↗">للاستفسارات، تواصل معنا عبر واتساب ↗</a></p>
+    </section>
+
+    <section id="configuration-notice" class="notice-panel" hidden aria-live="polite">
+      <div class="notice-icon">i</div>
+      <div>
+        <h2>الدخول ودعوات الحسابات متوقفة إلى أن يُربط Supabase</h2>
+        <p>ملف إعدادات المشروع الحالي فارغ، لذلك لا يمكن تسجيل الدخول أو إرسال دعوات الحسابات الآن. أضف رابط مشروع Supabase والمفتاح العام (publishable/anon) في <code>config.js</code>، طبّق ترحيلات قاعدة البيانات، انشر وظائف الخادم، ثم أعد نشر الموقع. لا يوجد تسجيل عام؛ يعتمد الوصول على دعوات بريد معتمدة.</p>
+        <p>على الموقع المنشور، أضف رابط <code>/academy_index.html</code> ضمن عناوين إعادة التوجيه المسموح بها في Supabase Auth. تسجيل Google يحتاج كذلك إعداد مزوّد Google في Supabase.</p>
+        <p><a href="README.md">اقرأ خطوات إعداد Supabase والاستضافة</a>. لا تضع مفتاح Service Role أو مفاتيح Gemini في ملفات المتصفح.</p>
+      </div>
+    </section>
+
+    <section id="auth-panel" class="auth-layout" hidden aria-labelledby="auth-heading">
+      <div class="auth-story">
+        <span class="section-label">مساحتك المهنية</span>
+        <h2 id="auth-heading">مسارك يبدأ <em>بخطوة.</em></h2>
+        <p>احفظ تقدّمك، ونظّم دروسك، واطلب المساعدة من المدرّب أو المساعد التعليمي عند الحاجة.</p>
+        <div class="story-note"><span>01</span> دروس تطبيقية مرتبطة بحالات المشروع اليومية</div>
+        <div class="story-note"><span>02</span> قوالب وأمثلة وملاحظات تحت حسابك</div>
+        <div class="story-note"><span>03</span> مجتمع مهني يتعلّم بالممارسة</div>
+      </div>
+      <div class="auth-card">
+        <form id="auth-form">
+          <label for="email">البريد الإلكتروني</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+          <label for="password">كلمة المرور</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" minlength="8" placeholder="٨ أحرف على الأقل" required>
+          <button class="primary-button form-submit" id="auth-submit" type="submit">دخول آمن <span>↗</span></button>
+        </form>
+        <form id="password-update-form" hidden>
+          <label for="new-password">كلمة المرور الجديدة</label>
+          <input id="new-password" type="password" autocomplete="new-password" minlength="8" placeholder="٨ أحرف على الأقل" required>
+          <button class="primary-button form-submit" type="submit">حفظ كلمة المرور <span>↗</span></button>
+        </form>
+        <button id="google-sign-in" class="google-button" type="button"><span aria-hidden="true">G</span> المتابعة باستخدام Google</button>
+        <button id="forgot-password" class="link-button" type="button">نسيت كلمة المرور؟ أرسل رابط الاستعادة</button>
+        <p class="auth-consent">يقتصر الدخول على الحسابات التي أنشأها مسؤول الأكاديمية. <a href="privacy-policy.html">سياسة الخصوصية</a> · <a href="terms-of-use.html">شروط الاستخدام</a></p>
+        <p id="auth-message" class="form-message" role="status"></p>
+      </div>
+    </section>
+
+    <section id="dashboard" hidden>
+      <div class="dashboard-heading">
+        <div><span class="section-label">لوحة التعلّم</span><h2 id="welcome-heading">أهلاً بعودتك.</h2><p id="dashboard-subtitle">هذا مسارك، خطوة بخطوة.</p></div>
+        <button id="show-courses" class="secondary-button" type="button">استكشف كل الدورات <span>↗</span></button>
+      </div>
+      <div id="profile-tools" class="profile-tools">
+        <span id="role-badge" class="role-badge"></span>
+        <label for="profile-name">الاسم الظاهر</label><input id="profile-name" maxlength="100" autocomplete="name">
+        <button id="save-profile" class="quiet-button" type="button">حفظ الاسم</button>
+        <form id="admin-invite-form" class="admin-invite-form" hidden>
+          <label for="admin-invite-code">رمز دعوة المدير (يُستخدم مرة واحدة)</label>
+          <input id="admin-invite-code" type="password" autocomplete="one-time-code" required maxlength="128">
+          <button class="quiet-button" type="submit">تفعيل صلاحية المدير</button>
+        </form>
+      </div>
+      <div class="dashboard-grid">
+        <div class="dashboard-main">
+          <div class="section-title-row"><div><span class="section-label">مسارك</span><h3 id="courses-heading">الدورات المسجّل فيها</h3></div><span id="enrollment-count" class="small-count"></span></div>
+          <div id="my-courses" class="course-grid"></div>
+          <div class="section-title-row all-courses-title"><div><span class="section-label">ابدأ هنا</span><h3>الدورات المتاحة</h3></div></div>
+          <div id="available-courses" class="course-grid"></div>
+        </div>
+        <aside class="dashboard-aside">
+          <div class="aside-card"><span class="aside-symbol">✳</span><span class="section-label">هذا الأسبوع</span><h3>الممارسة الصغيرة تصنع فرقاً.</h3><p>اختر درساً واحداً، أكمِله، وطبّق فكرة منه في مشروعك القادم.</p></div>
+          <div class="aside-card session-card"><span class="section-label">جلسات مباشرة</span><h3>لقاءات الأكاديمية</h3><div id="upcoming-sessions"><p class="empty-state">ستظهر هنا الجلسات القادمة المسجّلة في دوراتك.</p></div></div>
+        </aside>
+      </div>
+      <section id="site-assistant" class="assistant-box site-assistant" aria-labelledby="site-assistant-title">
+        <div class="section-title-row">
+          <div>
+            <span class="section-label" data-ar="مركز المساعدة" data-en="HELP CENTER">مركز المساعدة</span>
+            <h3 id="site-assistant-title" data-ar="مساعد الأكاديمية الذكي" data-en="Academy learning assistant">مساعد الأكاديمية الذكي</h3>
+            <p data-ar="اسأل عن الموقع أو الدورات أو ضبط الوثائق وAconex وExcel." data-en="Ask about the site, courses, document control, Aconex, or Excel.">اسأل عن الموقع أو الدورات أو ضبط الوثائق وAconex وExcel.</p>
+          </div>
+        </div>
+        <div id="site-assistant-messages" class="assistant-messages" role="log" aria-live="polite" aria-relevant="additions text"></div>
+        <form id="site-assistant-form" class="assistant-form">
+          <label class="sr-only" for="site-assistant-input" data-ar="اكتب سؤالك" data-en="Write your question">اكتب سؤالك</label>
+          <textarea id="site-assistant-input" name="message" maxlength="2000" placeholder="اكتب سؤالك هنا..." required></textarea>
+          <button class="primary-button" type="submit"><span class="assistant-label" data-ar="اسأل المساعد" data-en="Ask the assistant">اسأل المساعد</span><span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="field-hint" data-ar="لا ترسل كلمات مرور أو بيانات مشروع سرية. تُعالج الأسئلة عبر خدمة المساعد عند إعدادها." data-en="Do not send passwords or confidential project data. Questions are processed by the assistant service when configured.">لا ترسل كلمات مرور أو بيانات مشروع سرية. تُعالج الأسئلة عبر خدمة المساعد عند إعدادها.</p>
+      </section>
+    </section>
+
+    <section id="admin-dashboard" class="admin-overview" hidden aria-labelledby="admin-dashboard-title">
+      <div class="section-title-row"><div><span class="section-label">ADMINISTRATION</span><h3 id="admin-dashboard-title">إدارة الأكاديمية والمستخدمين</h3><p id="admin-dashboard-caption">ملخص حسابات المستخدمين والمحتوى المسجل في قاعدة البيانات.</p></div><span class="role-badge">Admin only</span></div>
+      <div class="admin-metrics">
+        <div class="admin-metric"><strong id="metric-users">—</strong><span>إجمالي الحسابات</span></div>
+        <div class="admin-metric"><strong id="metric-students">—</strong><span>الطلاب</span></div>
+        <div class="admin-metric"><strong id="metric-instructors">—</strong><span>المدرّبون</span></div>
+        <div class="admin-metric"><strong id="metric-admins">—</strong><span>المشرفون</span></div>
+        <div class="admin-metric"><strong id="metric-courses">—</strong><span>الدورات</span></div>
+        <div class="admin-metric"><strong id="metric-enrollments">—</strong><span>التسجيلات</span></div>
+        <div class="admin-metric"><strong id="metric-lessons">—</strong><span>الدروس</span></div>
+        <div class="admin-metric"><strong id="metric-submissions">—</strong><span>تسليمات الواجبات</span></div>
+        <div class="admin-metric"><strong id="metric-certificates">—</strong><span>الشهادات</span></div>
+      </div>
+      <section class="admin-invitations" aria-labelledby="admin-invitations-title">
+        <div class="section-title-row"><div><span class="section-label">ACCESS CONTROL</span><h3 id="admin-invitations-title">دعوات الحسابات والموافقة على البريد</h3><p class="field-hint">لا يوجد تسجيل عام. أرسل دعوة إلى بريد معتمد، وحدد هل الحساب طالب أم مدرّب. يمكن إيقاف الدخول لاحقاً من قائمة الحسابات.</p></div></div>
+        <form id="admin-invite-user-form" class="admin-invite-user-form">
+          <label for="invite-user-email">البريد الإلكتروني</label><input id="invite-user-email" type="email" autocomplete="email" required maxlength="254" placeholder="name@example.com">
+          <label for="invite-user-name">الاسم (اختياري)</label><input id="invite-user-name" autocomplete="name" maxlength="100">
+          <label for="invite-user-role">الصلاحية</label><select id="invite-user-role"><option value="student">طالب</option><option value="instructor">مدرّب</option></select>
+          <button class="primary-button" type="submit">اعتماد البريد وإرسال الدعوة <span>↗</span></button>
+        </form>
+        <div class="admin-invitations-heading"><strong>قائمة البريد المعتمد والدعوات</strong><button id="refresh-admin-invites" class="quiet-button" type="button">تحديث القائمة</button></div>
+        <div id="admin-invites-list" class="admin-invites-list" aria-live="polite"></div>
+      </section>
+      <div class="admin-users-toolbar">
+        <div><strong>حسابات المستخدمين</strong><p class="field-hint">بيانات الحساب الأساسية فقط؛ لا يمكن لأي مشرف الاطلاع على كلمات المرور. ترقية المشرفين الرئيسيين تبقى بإجراء المالك.</p></div>
+        <input id="admin-user-search" type="search" autocomplete="off" placeholder="ابحث بالاسم أو البريد أو الدور">
+      </div>
+      <div id="admin-users-list" class="admin-users-list" aria-live="polite"></div>
+    </section>
+
+    <section id="instructor-panel" class="instructor-panel" hidden>
+      <div class="section-title-row"><div><span class="section-label">مساحة المدرّب</span><h3>أدر المحتوى وشارك الخبرة.</h3></div><span class="role-badge">Instructor workspace</span></div>
+      <div class="instructor-grid">
+        <form id="course-form" class="editor-card">
+          <input id="editing-course-id" type="hidden">
+          <span id="course-form-mode" class="section-label">دورة جديدة</span><h4 id="course-form-title">أضف دورة تعليمية</h4>
+          <label for="course-title-ar">اسم الدورة بالعربية</label><input id="course-title-ar" required maxlength="120">
+          <label for="course-title-en">اسم الدورة بالإنجليزية</label><input id="course-title-en" required maxlength="120">
+          <label for="course-description-ar">وصف مختصر</label><textarea id="course-description-ar" rows="3" maxlength="700"></textarea>
+          <label for="course-description-en">Course description (English)</label><textarea id="course-description-en" rows="3" maxlength="700"></textarea>
+          <label for="course-level">المستوى</label><select id="course-level"><option value="beginner">مبتدئ</option><option value="intermediate">متوسط</option><option value="advanced">متقدم</option></select>
+          <div class="input-row"><label for="course-duration-hours">مدة الدورة بالساعات (اختياري)<input id="course-duration-hours" type="number" min="1" max="1000" placeholder="مثال: 12"></label><label for="course-price-ar">السعر المعروض بالعربية (اختياري)<input id="course-price-ar" maxlength="80" placeholder="مثال: تواصل للاستفسار"></label></div>
+          <label for="course-price-en">Displayed price in English (optional)</label><input id="course-price-en" maxlength="80" placeholder="Example: Contact us">
+          <label for="course-schedule-ar">المواعيد أو طريقة الدراسة (اختياري)</label><textarea id="course-schedule-ar" rows="2" maxlength="240" placeholder="يحددها مسؤول الأكاديمية"></textarea>
+          <label for="course-schedule-en">Schedule or learning format (optional)</label><textarea id="course-schedule-en" rows="2" maxlength="240" placeholder="Set by the academy administrator"></textarea>
+          <small class="field-hint">السعر للعرض والاستفسار فقط؛ لا تُعالج المنصة المدفوعات حالياً.</small>
+          <label class="check-label"><input id="course-published" type="checkbox"> إتاحة الدورة للطلاب بعد الحفظ</label>
+          <div class="course-form-actions"><button class="primary-button" type="submit">حفظ الدورة <span>↗</span></button><button id="cancel-course-edit" class="quiet-button" type="button" hidden>إلغاء التعديل</button></div>
+        </form>
+        <form id="lesson-form" class="editor-card">
+          <span class="section-label">درس جديد</span><h4>أضف درساً إلى إحدى دوراتك</h4>
+          <label for="lesson-course">الدورة</label><select id="lesson-course" required><option value="">اختر الدورة</option></select>
+          <div class="input-row"><label>الاسم بالعربية<input id="lesson-title-ar" required maxlength="120"></label><label>Title in English<input id="lesson-title-en" required maxlength="120"></label></div>
+          <label for="lesson-content-ar">ملخص الدرس</label><textarea id="lesson-content-ar" rows="4" maxlength="4000"></textarea>
+          <label for="lesson-content-en">Lesson summary (English)</label><textarea id="lesson-content-en" rows="4" maxlength="4000"></textarea>
+          <div class="input-row"><label>مدة الدرس بالدقائق<input id="lesson-duration" type="number" min="0" max="1440" value="10"></label><label>رقم الدرس<input id="lesson-position" type="number" min="1" value="1" required></label></div>
+          <label class="check-label"><input id="lesson-preview" type="checkbox"> إتاحة الدرس كتجربة مجانية</label>
+          <label for="video-file">فيديو الدرس (Google Drive، حتى 500 ميغابايت)</label><input id="video-file" type="file" accept="video/mp4,video/webm,video/quicktime">
+          <small class="field-hint">سيرفع الفيديو إلى Drive الخاص بحساب Google. بعد الرفع يمكنك مشاركة الملف مع طلاب الدورة من قائمة المسجّلين.</small>
+          <label class="check-label"><input id="share-video" type="checkbox"> مشاركة الفيديو مع الطلاب المسجّلين حالياً (بريدهم في Google Drive)</label>
+          <label for="resource-file">ملف إضافي للدرس (PDF أو Word أو Excel، حتى 50 ميغابايت)</label><input id="resource-file" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png">
+          <label class="check-label"><input id="create-quiz" type="checkbox"> إنشاء سؤال اختياري للدرس</label>
+          <div id="quiz-fields" hidden>
+            <label for="quiz-question">السؤال بالعربية</label><input id="quiz-question" maxlength="500">
+            <label>الاختيارات (أدخل اختياراً في كل حقل)</label>
+            <input class="quiz-option" maxlength="200" placeholder="الاختيار الأول">
+            <input class="quiz-option" maxlength="200" placeholder="الاختيار الثاني">
+            <input class="quiz-option" maxlength="200" placeholder="الاختيار الثالث">
+            <input class="quiz-option" maxlength="200" placeholder="الاختيار الرابع">
+            <label for="correct-option">رقم الإجابة الصحيحة</label><select id="correct-option"><option value="0">الأولى</option><option value="1">الثانية</option><option value="2">الثالثة</option><option value="3">الرابعة</option></select>
+          </div>
+          <button class="primary-button" type="submit">حفظ الدرس <span>↗</span></button>
+        </form>
+        <form id="meeting-form" class="editor-card">
+          <span class="section-label">جلسة مباشرة</span><h4>احجز موعداً على Google Meet</h4>
+          <label for="meeting-course">الدورة</label><select id="meeting-course" required><option value="">اختر الدورة</option></select>
+          <label for="meeting-title">عنوان الجلسة</label><input id="meeting-title" required maxlength="150">
+          <div class="input-row"><label>تاريخ ووقت البداية<input id="meeting-start" type="datetime-local" required></label><label>المدة بالدقائق<input id="meeting-duration" type="number" min="15" max="180" value="60" required></label></div>
+          <label for="meeting-attendees">بريد المشاركين (اختياري، افصل بفواصل)</label><input id="meeting-attendees" type="text" autocomplete="off">
+          <button class="primary-button" type="submit">إنشاء رابط Meet <span>↗</span></button>
+          <div id="created-meet" class="meet-result" hidden></div>
+        </form>
+      </div>
+      <div class="section-title-row instructor-students-heading"><div><span class="section-label">طلاب الدورات</span><h3>الدورات والتسجيلات</h3></div></div>
+      <div id="instructor-courses" class="instructor-courses"></div>
+    </section>
+
+    <section id="course-view" class="course-view" hidden>
+      <button id="back-to-dashboard" class="back-button" type="button">← لوحة التعلّم</button>
+      <div class="course-view-heading"><div><span class="section-label" id="course-level-label">المقرر</span><h2 id="course-view-title"></h2><p id="course-view-description"></p><div id="course-view-facts" class="course-facts"></div><button id="certificate-button" class="secondary-button" type="button" hidden>إصدار شهادة الإكمال <span>↗</span></button></div><div class="progress-ring" aria-label="تقدم الدورة"><strong id="progress-number">0%</strong><small>مكتمل</small></div></div>
+      <article id="certificate-card" class="certificate-card" hidden></article>
+      <div class="lesson-layout">
+        <aside class="lesson-sidebar"><span class="section-label">محتوى الدورة</span><h3>الدروس</h3><div id="lesson-list" class="lesson-list"></div></aside>
+        <article id="lesson-detail" class="lesson-detail"><div class="lesson-placeholder"><span>◈</span><h3>اختر درساً للبدء.</h3><p>تقدّم على مهل؛ كل درس يبني على ما تعلّمته قبله.</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="portal-footer">
+    <div><a href="index.html"><span class="footer-brand-dot"></span> Mostanad Academy</a><p>تعلّم بالممارسة. اعمل بثقة.</p></div>
+    <div class="footer-links"><a href="privacy-policy.html">الخصوصية</a><a href="terms-of-use.html">شروط الاستخدام</a><a href="mailto:aragad477@gmail.com">تواصل مع الأكاديمية</a><a href="courses.html">الكورسات</a></div>
+    <small>Ahmed Khalaf © Khalaf_DC | Mostanad Academy</small>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script>
+(function() {
+  var lang = document.documentElement.lang === 'en' ? 'en' : 'ar';
+  if (window.MAcourses) {
+    window.MAcourses.renderPublicCourses('extra-courses-grid', lang);
+  }
+  // إعادة الرسم عند تغيير اللغة
+  document.addEventListener('languagechange', function() {
+    var l = document.documentElement.lang === 'en' ? 'en' : 'ar';
+    if (window.MAcourses) window.MAcourses.renderPublicCourses('extra-courses-grid', l);
+  });
+})();
+</script>
+</body>
+</html>

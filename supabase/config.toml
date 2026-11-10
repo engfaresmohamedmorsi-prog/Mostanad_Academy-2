@@ -1,0 +1,19 @@
+project_id = "mostanad-academy"
+
+[functions.tutor]
+verify_jwt = true
+
+[functions.quiz-admin]
+verify_jwt = true
+
+[functions.quiz-submit]
+verify_jwt = true
+
+[functions.certificate-issue]
+verify_jwt = true
+
+[functions.admin-users]
+verify_jwt = true
+
+[functions.admin-invite]
+verify_jwt = true

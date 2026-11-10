@@ -1,0 +1,53 @@
+.sidebar{
+  width:260px;
+  height:100vh;
+  background:#0f172a;
+  color:#fff;
+  padding:20px;
+  position:fixed;
+  left:0;
+  top:0;
+  overflow-y:auto;
+  font-family:Arial;
+}
+
+.logo{
+  font-size:18px;
+  font-weight:bold;
+  margin-bottom:20px;
+  color:#38bdf3;
+}
+
+.dropdown-btn{
+  width:100%;
+  background:none;
+  border:none;
+  color:#fff;
+  text-align:left;
+  padding:10px;
+  font-size:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.dropdown-btn:hover{
+  background:#1e293b;
+  border-radius:8px;
+}
+
+.dropdown-container{
+  display:none;
+  padding-left:15px;
+}
+
+.dropdown-container a{
+  display:block;
+  color:#cbd5e1;
+  padding:8px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.dropdown-container a:hover{
+  color:#38bdf3;
+}

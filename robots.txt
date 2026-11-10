@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ahmedkhalaf477.github.io/Mostanad-Academy/sitemap.xml
